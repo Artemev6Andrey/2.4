@@ -3,6 +3,7 @@
 
 import sys
 
+
 if __name__ == '__main__':
     A = list(map(int, input().split()))
     if not A:
@@ -12,7 +13,7 @@ if __name__ == '__main__':
     minimum = min(A)
     print("Наименьший элемент", minimum)
 
-    for x in range(len(A)):
-        if A[x] == minimum:
+    for x, item in enumerate(A):
+        if item == minimum:
             A[-1], A[x] = A[x], A[-1]
     print("Преобразованный элемент", A)
